@@ -335,7 +335,13 @@ main p{
 @media screen and (min-width: 1200px) {
 
     header{
-        display: inline;
+        display: flex;
+        justify-content: center;
+    }
+
+    header nav{
+        display: flex;
+        justify-content: center;
     }
 
     header .accordion{
@@ -351,7 +357,6 @@ main p{
     }
 
     header .redirecciones ul li{
-        padding: 2rem 0rem 0rem 24rem;
         list-style: none;
     }
 
@@ -366,11 +371,9 @@ main p{
     }
 
     header .redirecciones-adn ul li{
-        padding: 2rem 0rem 0rem 26rem;
         list-style: none;
     }
 
-    
 
     main .contenedor{
     display: grid;
@@ -380,24 +383,31 @@ main p{
     "item-uno item-tres item-cinco"
     "item-dos item-cuatro item-seis";
     gap: 5rem;
-    padding-left: 17rem;
-    padding-top: 3rem;
+    justify-content: center;
     }
 
     #carouselExample{
-    width: 50%;
-    height: 84%;
-    left: 1rem;
+    width: 346px;
+    height: 432px;
     border: 1px solid #A85C25;
-    margin-left: 9rem;
+    left: 20%;
     }
 
     #carouselExample2{
-    width: 50%;
-    height: 84%;
-    left: 1rem;
+    width: 346px;
+    height: 432px;
     border: 1px solid #A85C25;
-    margin-left: 9rem;
+    }
+
+    .item-cuatross{
+        width: 600px;
+        height: 432px;
+    }
+
+    .item-tress{
+        display: inline;
+        width: 600px;
+        height: 32px;
     }
 
     .titulo-productos{
@@ -418,7 +428,6 @@ main p{
 
     .item-unos{
         grid-area: item-unos;
-        text-align: center;
         padding-top: 1rem;
     }
 
@@ -428,13 +437,20 @@ main p{
 
     .item-tress{
         grid-area: item-tress;
-        text-align: center;
     }
 
     .item-cuatross{
         grid-area: item-cuatros;
     }
 
+    .matera-premium{
+        text-align: left;
+        margin-left: 10rem;
+    }
+
+    .mesitas-materas{
+        text-align: left;
+    }
 
 
     footer h4{
