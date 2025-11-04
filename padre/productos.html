@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Productos</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html"><img src="../img/logos/logo1-300pxprueba.png" alt=""></a>
+            <div class="redirecciones">
+                <ul>
+                    <li>
+                        <a href="acerca-de-nosotros.html">ACERCA DE NOSOTROS</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- menu hamburguesa -->
+            <div class="accordion" id="accordionExample">
+            <div class="accordion-item" style="border: none;">
+            <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color: transparent; border: none;">
+        <!-- tres lineas -->
+                <svg class="tres-lineas" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </button>
+            </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <ul>
+                    <li><a href="../padre/acerca-de-nosotros.html">ACERCA DE NOSOTROS</a></li>
+                    <li><a href="../padre/contacto.html">CONTACTO</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </header>
+    <main>
+        <div class="titulo-productos">
+            <h1>PRODUCTOS</h1>
+        </div>
+        <div class="main-productos">
+         <!-- carrusel 1-->
+        <div class="item-unos">
+            <p class="matera-premium">MATERAS PREMIUM</p>
+        </div>
+        <div class="item-doss">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="../img/productos/matera.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/productos/matera-costado.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/productos/matera-arriba.png" class="d-block w-100" alt="...">
+                </div>
+                </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="color: #A85C25;"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="color: #A85C25;"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+    
+        <!-- carrusel 2 -->
+        <div item-tress>
+            <p class="mesitas-materas">MESITAS MATERAS</p>
+        </div>
+        <div class="item-cuatross">
+            <div id="carouselExample2" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="../img/productos/mesita-matera-frente.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/productos/mesita-matera-lado.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    
+</div>
+</main>
+    <footer>
+         <div>
+            <h4>Seguinos en Instagram para enterarte de todo!</h4>
+            <a href="https://www.instagram.com/ningra.mdz/" target="_blank">
+                <img src="../img/logos/logo-ig.png" alt="">
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
