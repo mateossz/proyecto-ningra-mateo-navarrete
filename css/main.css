@@ -8,58 +8,14 @@ body{
     background-color: #E0D2C1
 }
 
-.titulo-productos{
-    display: block;
-    text-align: center;
-    width: 100%;
-}
-
-/* main index*/
-
-main{
-    text-align: center;
-}
-
-main h1{
-    background-color: #A85C25;
-    color:#E0D2C1;
-}
-
-main h2 span{
-    color: #A85C25
-}
-
-main h2{
-    color: #325782;
-}
-
-main div p{
-    text-align: center;
-    color: #325782;
-    font-size: large
-}
-
-main div p a{
-    text-align: center;
-    color:#A85C25
-}
-
-main p span{
-    font-size:medium;
-    color:#325782
-    
-}
-
-main img{
-    width: 400px;
-}
+/* header principal */
 
 footer div{
     text-align: left;
     color:#325782
 }
 
-/* header index */
+/* header */
 
 header{
     display: flex;
@@ -75,10 +31,6 @@ nav a img{
 }
 
 .redirecciones{
-    display: none;
-}
-
-.redirecciones-adn{
     display: none;
 }
 /* menu hamburguesa */
@@ -159,13 +111,47 @@ header nav ul li{
     text-align: center;
 }
 
-/* main productos */
+/* main index*/
 
-main ul li{
-    text-align: left;
-    color: #A85C25;
-    font-size: large;
+main{
+    text-align: center;
 }
+
+main h1{
+    background-color: #A85C25;
+    color:#E0D2C1;
+}
+
+main h2 span{
+    color: #A85C25
+}
+
+main h2{
+    color: #325782;
+}
+
+main div p{
+    text-align: center;
+    color: #325782;
+    font-size: large
+}
+
+main div p a{
+    text-align: center;
+    color:#A85C25
+}
+
+main p span{
+    font-size:medium;
+    color:#325782
+    
+}
+
+main img{
+    width: 400px;
+}
+
+/* main productos */
 
 #carouselExample{
     width: 90%;
@@ -184,28 +170,6 @@ main ul li{
 .mesitas-materas{
     padding-top: 15px;
 }
-
-
-
-/* header acerca de nosotros */
-
-header h1{
-    background-color: #A85C25;
-    color: #E0D2C1;
-}
-/* main acerca de nosotros */
-main div span{
-    color: #A85C25;
-}
-
-main h3{
-    color: #325782;
-}
-
-main p{
-    color: #A85C25;
-}
-
 
 /* contacto */
 
@@ -249,6 +213,26 @@ main p{
     grid-area: item-seis;
 }
 
+.mesitas-materas{
+    text-align: left;
+    padding: 0rem 0rem 0rem 1rem;
+    margin-top: 1rem;
+    background-color: #A85C25;
+    width: 200px;
+    color: #E0D2C1;
+}
+
+.matera-premium{
+    text-align: left;
+    padding: 0rem 0rem 0rem 1rem;
+    background-color: #A85C25;
+    width: 200px;
+    color: #E0D2C1;
+}
+
+
+/* mq tablet */
+
 @media screen and (min-width: 750px )and (max-width: 1200px ) {
     
     header{
@@ -260,37 +244,35 @@ main p{
     }
 
     header .redirecciones{
-        display: block;
+        display: inline;
+    }
+
+    header nav {
+        gap: 10rem;
     }
 
     header .redirecciones ul li a{
         font-weight: 800;
+        font-size: 18px;
     }
 
     header .redirecciones ul li{
-        padding: 2rem 0rem 0rem 9rem;
         list-style: none;
+        padding-top: 1rem;
     }
 
-    /* redirecciones acerca de nosotros */
-
-    header .redirecciones-adn{
+    header .redirecciones ul{
+        margin: 0;
+        padding: 0;
         display: block;
+        width: 250px;
+        height: auto;
+        padding-top: 1.3rem;
     }
 
-    header .redirecciones-adn ul li a{
-        font-weight: 800;
-    }
-
-    header .redirecciones-adn ul li{
-        padding: 2rem 0rem 0rem 12rem;
-        list-style: none;
-    }
-
-    .titulo-productos{
-        display: block;
-        text-align: center;
-        width: 100%;
+    /* main tablet*/
+    main h1{
+        margin-bottom: 2rem;
     }
 
     main h2{
@@ -332,83 +314,101 @@ main p{
     }
 }
 
+/* mq desktop */
+
 @media screen and (min-width: 1200px) {
 
     header{
-        display: flex;
-        justify-content: center;
-    }
-
-    header nav{
-        display: flex;
-        justify-content: center;
+        display: inline;
     }
 
     header .accordion{
         display: none;
     }
 
-    header .redirecciones{
-        display: block;
+    header .redirecciones {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    header nav .logo-principal{
+        position: absolute;
+        top: 0;
+        left: 0;
+
     }
 
     header .redirecciones ul li a{
         font-weight: 800;
+        font-size: 18px;
     }
 
     header .redirecciones ul li{
         list-style: none;
+        padding-top: 1rem;
     }
 
-    /* redirecciones acerca de nosotros */
-
-        header .redirecciones-adn{
+    header .redirecciones ul{
+        margin: 0;
+        padding: 0;
         display: block;
+        width: 250px;
+        height: auto;
+        padding-top: 1.3rem;
     }
 
-    header .redirecciones-adn ul li a{
-        font-weight: 800;
+    main h1{
+        margin-top: 3rem;
     }
 
-    header .redirecciones-adn ul li{
-        list-style: none;
+    main h1, h2{
+        margin-bottom: 2rem;
     }
 
+    /* contacto */
 
     main .contenedor{
-    display: grid;
-    grid-template-columns: 10rem 10rem 10rem;
-    grid-template-rows: 1rem 1rem;
-    grid-template-areas: 
-    "item-uno item-tres item-cinco"
-    "item-dos item-cuatro item-seis";
-    gap: 5rem;
-    justify-content: center;
+        display: grid;
+        grid-template-columns: 10rem 10rem 10rem;
+        grid-template-rows: 2rem 1rem;
+        grid-template-areas: 
+        "item-uno item-tres item-cinco"
+        "item-dos item-cuatro item-seis";
+        gap: 7rem;
+        justify-content: center;
     }
 
-    #carouselExample{
-    width: 346px;
-    height: 432px;
-    border: 1px solid #A85C25;
-    left: 20%;
+    .item-uno{
+        grid-area: item-uno;
     }
 
-    #carouselExample2{
-    width: 346px;
-    height: 432px;
-    border: 1px solid #A85C25;
+    .item-dos{
+        grid-area: item-dos;
     }
 
-    .item-cuatross{
-        width: 600px;
-        height: 432px;
+    .item-tres{
+        grid-area: item-tres;
     }
 
-    .item-tress{
-        display: inline;
-        width: 600px;
-        height: 32px;
+    .item-cuatro{
+        grid-area: item-cuatro;
     }
+
+    .item-cinco{
+        grid-area: item-cinco;
+    }
+
+    .item-seis{
+        grid-area: item-seis;
+    }
+
+    .item-uno img, .item-tres img, .item-cinco img{
+        width: 100px;
+        height: 100px;
+    }
+
+    /* productos */
 
     .titulo-productos{
         display: block;
@@ -417,43 +417,58 @@ main p{
     }
 
     .main-productos{
+        width: 100%;
+        height: auto;
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 2rem 30rem;
+        grid-template-rows: 2rem 35rem;
         grid-template-areas: 
         "item-unos item-tress"
         "item-doss item-cuatros";
         gap: 1rem;
     }
 
+    #carouselExample{
+        width: 60%;
+        height: auto;
+        border: 20px solid #A85C25;
+        border-radius: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #carouselExample2{
+        width: 60%;
+        height: auto;
+        border: 20px solid #A85C25;
+        border-radius: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
     .item-unos{
         grid-area: item-unos;
-        padding-top: 1rem;
+        width: 710px;
     }
 
     .item-doss{
         grid-area: item-doss;
+        width: 710px;
     }
 
     .item-tress{
         grid-area: item-tress;
+        width: 710px;
     }
 
     .item-cuatross{
         grid-area: item-cuatros;
+        width: 710px;
     }
 
-    .matera-premium{
-        text-align: left;
-        margin-left: 10rem;
-    }
-
-    .mesitas-materas{
-        text-align: left;
-    }
 
 
     footer h4{
-        font-weight: 600;
+        font-weight: 575;
     }
 }
