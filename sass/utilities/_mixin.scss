@@ -1,0 +1,17 @@
+// con parametros
+@mixin border ($border, $margin){
+    border: $border;
+    margin-top: $margin;
+}
+
+
+// sin parametros
+@mixin header{
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin main{
+    color: #325782;
+    text-align: center;
+}

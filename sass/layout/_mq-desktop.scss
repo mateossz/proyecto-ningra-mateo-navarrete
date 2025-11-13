@@ -1,0 +1,162 @@
+// VARIABLES
+@use "../utilities/variables" as *;
+// MIXIN
+@use "../utilities/mixin" as *;
+
+/* MQ DESKTOP */
+
+@media screen and (min-width: 1200px){
+/* header desktop*/
+    header{
+        h1{
+            margin-top: 3rem;
+        }
+        .accordion{
+            display: none;
+        }
+        .headerr{
+            display: inline;
+        }
+        .headerr{
+            .redirecciones{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+            .redirecciones ul li a{
+                font-weight: 800;
+                font-size: 18px;
+            }
+            .redirecciones ul li{
+                list-style: none;
+                padding-top: 1rem;
+            }
+            .redirecciones ul{
+                margin: 0;
+                padding: 0;
+                display: block;
+                width: 250px;
+                height: auto;
+                padding-top: 1.3rem;
+            }
+            .logo-principal{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+      
+    }
+    /*estilos de main */
+    main{
+        h2{
+            margin-bottom: 2rem;
+        }
+    }
+    /* contacto */
+    main{
+        .contenedor{
+            display: grid;
+            grid-template-columns: 10rem 10rem 10rem;
+            grid-template-rows: 2rem 1rem;
+            grid-template-areas: 
+            "item-uno item-tres item-cinco"
+            "item-dos item-cuatro item-seis";
+            gap: 7rem;
+            justify-content: center;
+        }
+        .item-uno{
+            grid-area: item-uno;
+        }
+
+        .item-dos{
+            grid-area: item-dos;
+        }
+
+        .item-tres{
+            grid-area: item-tres;
+        }
+
+        .item-cuatro{
+            grid-area: item-cuatro;
+        }
+
+        .item-cinco{
+            grid-area: item-cinco;
+        }
+
+        .item-seis{
+            grid-area: item-seis;
+        }
+        .item-uno img, .item-tres img, .item-cinco img{
+            width: 100px;
+            height: 100px;
+        }
+    }
+/* PRODUCTOS */
+    main{
+        .titulo-productos{
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+        .main-productos{
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 2rem 35rem;
+            grid-template-areas: 
+                "item-unos item-tress"
+                "item-doss item-cuatros";
+            gap: 1rem;
+        }
+        #carouselExample, #carouselExample2{
+            width: 60%;
+            height: auto;
+            border: 20px solid $marron;
+            border-radius: 10px;
+            margin: 0;
+            padding: 0;
+        }
+        .item-unos{
+        grid-area: item-unos;
+        width: 710px;
+        }
+
+        .item-doss{
+            grid-area: item-doss;
+            width: 710px;
+        }
+
+        .item-tress{
+            grid-area: item-tress;
+            width: 710px;
+        }
+
+        .item-cuatross{
+            grid-area: item-cuatros;
+            width: 710px;
+        }
+        .mesitas-materas{
+            background-color: $marron;
+            width: 200px;
+            color: $pastel;
+            margin: 0;
+            padding: 0;
+        }
+        .matera-premium{
+            text-align: left;
+            padding: 0rem 0rem 0rem 1rem;
+            background-color: $marron;
+            width: 200px;
+            color: $pastel;
+        }
+    }
+/*footer*/
+    footer{
+        h4{
+            font-weight: 575;
+        }
+    }
+}

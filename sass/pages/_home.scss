@@ -1,0 +1,198 @@
+// VARIABLES
+@use "../utilities/variables" as *;
+// MIXIN
+@use "../utilities/mixin" as *;
+
+/* estilos de header */
+header{
+    background-color: $pastel;
+
+    .headerr{
+        @include header;
+        nav{
+            display: flex
+        }
+        nav a img{
+            text-align: center
+        }
+        .redirecciones{
+            display: none
+        }
+    }
+}
+  /* menu hamburguesa */
+header{
+    .headerr{
+        .accordion{
+            margin-right: .6rem;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .accordion-item{
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .accordion-header{
+            background-color: $pastel;
+            margin: 0;
+        }
+
+        .accordion-button{
+            padding: 0;
+            width: 2rem;
+            height: 2rem;
+            text-align: center;
+        }
+
+        #collapseOne{
+            position: absolute;
+            right: 3rem;
+            left: auto;
+            top: 1px;
+            width: 9rem;
+            height: 9rem;
+            background-color:$pastel;
+            border: 3px solid $azul;
+            border-radius: 10px;
+        }
+
+        .accordion-body ul li a{
+            text-decoration: none;
+            color: $azul;
+            font-weight: 600;
+        }
+
+        .accordion-body ul li{
+            list-style: none;
+            padding-top: 10px;
+        }
+
+        .accordion-body ul{
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        .accordion-button::after {
+            /* eliminar flechita */
+            display: none !important;
+        }
+
+        nav ul a{
+            text-decoration: none;
+            color: $marron;
+        }
+ 
+        nav ul li{
+            text-align: center;
+        }
+    }
+}
+
+header h1{
+    background-color: $marron;
+    color:$pastel;
+    text-align: center;
+}
+/* estilos de main */
+main{
+    @include main;
+    h2 span{
+        color: $marron;
+    }
+    h2{
+        color:  $azul;
+    }
+    div p{
+        text-align: center;
+        color: $azul;
+        font-size: large;
+    }
+
+    div p a{
+        text-align: center;
+        color: $marron;
+    }
+    p span{
+        font-size: medium;
+        color: $azul;
+    }
+    img{
+        width: 400px;
+        height: auto;
+    }
+}
+    
+ /* MAIN PRODUCTOS */
+ main{
+    #carouselExample, #carouselExample2{
+        width: 90%;
+        height: 50%;
+        left: 1.2rem;
+        border: 1px solid $marron;
+    }
+    
+    .mesitas-materas{
+        padding-top: 15px;
+        margin-top: 1rem;
+        background-color: $marron;
+        width: 200px;
+        color: $pastel;
+    }
+    .matera-premium{
+        text-align: left;
+        padding: 0rem 0rem 0rem 1rem;
+        background-color: $marron;
+        width: 200px;
+        color: $pastel;
+    }
+ }
+
+ /* MAIN CONTACTO */
+main{
+    .contenedor{
+        display: grid;
+        grid-template-columns: 1rem 1rem;
+        grid-template-rows: 1rem 1rem 1rem;
+        grid-template-areas: 
+        "item-uno item-dos"
+        "item-tres item-cuatro"
+        "item-cinco item-seis";
+        gap: 5rem;
+    }
+    .item-uno{
+    grid-area: item-uno;
+    }
+
+    .item-dos{
+        grid-area: item-dos;
+    }
+
+    .item-tres{
+        grid-area: item-tres;
+    }
+
+    .item-cuatro{
+        grid-area: item-cuatro;
+    }
+
+    .item-cinco{
+        grid-area: item-cinco;
+    }
+
+    .item-seis{
+        grid-area: item-seis;
+    }
+    .contenedor img{
+    width: 5rem;
+    height: auto;
+    }
+}
+
+footer{
+    h4{
+        color: $azul;
+        font-size: medium;
+    }
+}

@@ -1,0 +1,75 @@
+// VARIABLES
+@use "../utilities/variables" as *;
+// MIXIN
+@use "../utilities/mixin" as *;
+
+/* MQ TABLET */
+
+@media screen and (min-width: 750px )and (max-width: 1200px ){
+    /* header tablet  */
+    .headerr{
+        display: inline;
+    }
+
+    header{
+        .headerr{
+            .accordion{
+                display: none;
+            }
+            .redirecciones{
+                display: inline;
+            }
+            nav{
+                gap: 10rem;
+            }
+            .redirecciones ul li a{
+                font-weight: 800;
+                font-size: 18px;
+            }
+            .redirecciones ul li{
+                list-style: none;
+                padding-top: 1rem;
+            }
+            .redirecciones ul{
+                margin: 0;
+                padding: 0;
+                display: block;
+                width: 250px;
+                height: auto;
+                padding-top: 1.3rem;
+                text-align: center;
+            }
+        }
+    }
+/* main tablet*/
+    main{
+        h2{
+            font-weight: 800;
+        }
+        p{
+            font-weight: 700;
+        }
+        .contenedor{
+            display: grid;
+            grid-template-columns: 10rem 10rem 10rem;
+            grid-template-rows: 1rem 1rem;
+            grid-template-areas: 
+                "item-uno item-tres item-cinco"
+                "item-dos item-cuatro item-seis";
+            gap: 5rem;
+            padding-left: 5rem;
+            padding-top: 3rem;
+        }
+
+        #carrouselExample, #carrouselExample2{
+            width: 90%;
+            height: 50%;
+            left: 2.2rem;
+            border: 1px solid $marron;
+        }
+    }
+/* footer tablet */
+    footer h4{
+        font-weight: 600;
+    }
+}

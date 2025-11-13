@@ -1,0 +1,16 @@
+//VARIABLES
+@use "../utilities/variables" as *;
+
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* estilos generales */
+
+body{
+    font-family: "Work Sans", sans-serif;
+    background-color: $pastel; 
+    color: $azul;
+}
