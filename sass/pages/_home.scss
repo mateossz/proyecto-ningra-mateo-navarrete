@@ -5,19 +5,75 @@
 
 /* estilos de header */
 header{
-    background-color: $pastel;
+    background-color: $header-p;
 
     .headerr{
         @include header;
         nav{
-            display: flex
+            display: flex;
         }
         nav a img{
-            text-align: center
+            text-align: center;
         }
+        .logo-principal{
+            animation: slide-in-blurred-top .5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+        }
+
+        @keyframes slide-in-blurred-top {
+            0% {
+                transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+                transform-origin: 50% 0%;
+                filter: blur(40px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0) scaleY(1) scaleX(1);
+                transform-origin: 50% 50%;
+                filter: blur(0);
+                opacity: 1;
+            }
+        }
+
         .redirecciones{
-            display: none
+            display: none;
         }
+        .redirecciones ul li a{
+            @include s-redirecciones;
+        }
+        .redirecciones ul li a:hover{
+            background-color: $jover;
+            transform: scale(1.1);
+        }
+        .redirecciones ul li{
+            @include redirecciones;
+        }
+        .contacto{
+            animation: slide-in-blurred-left .5s cubic-bezier(0.230, 1.000, 0.320, 1.000) .4s both;
+        }
+        .adn{
+            animation: slide-in-blurred-left .5s cubic-bezier(0.230, 1.000, 0.320, 1.000) .7s both;
+        }
+        @keyframes slide-in-blurred-left {
+            0% {
+                transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+                transform-origin: 100% 50%;
+                filter: blur(40px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0) scaleY(1) scaleX(1);
+                transform-origin: 50% 50%;
+                filter: blur(0);
+                opacity: 1;
+            }
+        }
+        .redirecciones ul li:hover{
+            transform: scale(1.1);
+            transition: .5s;
+        }
+    }
+    h1{
+        margin-top: 10px;
     }
 }
   /* menu hamburguesa */
@@ -35,7 +91,7 @@ header{
         }
 
         .accordion-header{
-            background-color: $pastel;
+            background-color: $header-p;
             margin: 0;
         }
 
@@ -54,16 +110,36 @@ header{
             width: 9rem;
             height: 9rem;
             background-color:$pastel;
-            border: 3px solid $azul;
+            border: 3px solid $marron;
             border-radius: 10px;
+            animation: scale-in-tr 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         }
-
+        @keyframes scale-in-tr {
+            0% {
+                transform: scale(0);
+                transform-origin: 100% 0%;
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                transform-origin: 100% 0%;
+                opacity: 1;
+            }
+        }
         .accordion-body ul li a{
             text-decoration: none;
-            color: $azul;
+            color: $marron;
             font-weight: 600;
         }
-
+        .accordion-body ul li a:hover{
+            scale: 1;
+            color: $pastel;
+            background-color: $marron;
+            font-size: 15px;
+            display: block;
+            border-radius: 15px;
+            padding: 5px 10px 5px 10px;
+        }
         .accordion-body ul li{
             list-style: none;
             padding-top: 10px;
@@ -94,10 +170,40 @@ header h1{
     background-color: $marron;
     color:$pastel;
     text-align: center;
+    
 }
+.h1-header{
+    animation: slide-in-blurred-right 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) .5s both;
+}
+
+@keyframes slide-in-blurred-right {
+  0% {
+    transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    transform-origin: 0% 50%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
 /* estilos de main */
+.main-index{
+    background-image: url(../img/img-main.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 main{
     @include main;
+    
+    p a:hover{
+        color: $jover;
+    }
     h2 span{
         color: $marron;
     }
@@ -123,6 +229,7 @@ main{
         height: auto;
     }
 }
+
     
  /* MAIN PRODUCTOS */
  main{

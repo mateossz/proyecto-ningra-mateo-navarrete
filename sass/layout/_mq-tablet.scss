@@ -23,12 +23,10 @@
                 gap: 10rem;
             }
             .redirecciones ul li a{
-                font-weight: 800;
-                font-size: 18px;
+                @include s-redirecciones;
             }
             .redirecciones ul li{
-                list-style: none;
-                padding-top: 1rem;
+                @include redirecciones
             }
             .redirecciones ul{
                 margin: 0;

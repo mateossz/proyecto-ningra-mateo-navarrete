@@ -9,7 +9,7 @@
 /* header desktop*/
     header{
         h1{
-            margin-top: 3rem;
+            margin-top: 4rem;
         }
         .accordion{
             display: none;
@@ -24,20 +24,19 @@
                 width: 100%;
             }
             .redirecciones ul li a{
-                font-weight: 800;
-                font-size: 18px;
+                @include s-redirecciones;
             }
             .redirecciones ul li{
-                list-style: none;
-                padding-top: 1rem;
+                @include redirecciones
             }
-            .redirecciones ul{
+             .redirecciones ul{
                 margin: 0;
                 padding: 0;
                 display: block;
                 width: 250px;
                 height: auto;
                 padding-top: 1.3rem;
+                text-align: center;
             }
             .logo-principal{
                 position: absolute;
