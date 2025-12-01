@@ -12,6 +12,9 @@
     }
 
     header{
+        h1{
+            margin-top: 2rem;
+        }
         .headerr{
             .accordion{
                 display: none;
@@ -32,10 +35,10 @@
                 margin: 0;
                 padding: 0;
                 display: block;
-                width: 250px;
-                height: auto;
-                padding-top: 1.3rem;
                 text-align: center;
+            }
+            .productooo{
+                width: 250px;
             }
         }
     }
@@ -47,27 +50,296 @@
         p{
             font-weight: 700;
         }
-        .contenedor{
-            display: grid;
-            grid-template-columns: 10rem 10rem 10rem;
-            grid-template-rows: 1rem 1rem;
-            grid-template-areas: 
-                "item-uno item-tres item-cinco"
-                "item-dos item-cuatro item-seis";
-            gap: 5rem;
-            padding-left: 5rem;
-            padding-top: 3rem;
-        }
 
         #carrouselExample, #carrouselExample2{
-            width: 90%;
+            width: 60%;
             height: 50%;
             left: 2.2rem;
             border: 1px solid $marron;
         }
     }
-/* footer tablet */
-    footer h4{
+    /* contacto */
+    main{
+        .main-contacto, .main-grid{
+           margin-top: 2rem;
+        }
+        .contenedor{
+            display: grid;
+            grid-template-columns: 10rem 10rem;
+            grid-template-rows: 2rem 1rem 2rem 1rem;
+            grid-template-areas: 
+            "item-uno item-tres"
+            "item-dos item-cuatro"
+            "item-cinco item-siete"
+            "item-seis item-ocho";
+            gap: 7rem;
+            justify-content: center;
+        }
+        .item-uno{
+            grid-area: item-uno;
+            padding-top: 10px;
+            width: 160px;
+            height: 120px;
+            background-color: $header-p;
+            border-radius: 10px;
+        }
+
+        .item-dos{
+            grid-area: item-dos;
+            padding-top: 10px;
+            width: 160px;
+            height: 80px;
+            background-color: $header-p;
+            border-radius: 10px;
+        }
+        .item-dos p, .item-dos p span{
+            color: $marron;
+        }
+
+        .item-tres{
+            grid-area: item-tres;
+            padding-top: 10px;
+            width: 160px;
+            height: 120px;
+            background-color: $header-p;
+            border-radius: 10px;
+        }
+
+        .item-cuatro{
+            grid-area: item-cuatro;
+            padding-top: 10px;
+            width: 160px;
+            height: 80px;
+            background-color: $header-p;
+            border-radius: 10px;
+        }
+        .item-cuatro p{
+            color: $marron;
+            margin: 0;
+        }
+        .item-cuatro a{
+            text-decoration: none;
+            color: $marron;
+        }
+
+        .item-cinco{
+            grid-area: item-cinco;
+            padding-top: 10px;
+            width: 150px;
+            height: 120px;
+            background-color: $header-p;
+            border-radius: 10px;
+        }
+
+        .item-seis{
+            grid-area: item-seis;
+            padding-top: 10px;
+            width: 160px;
+            height: 80px;
+            background-color: $header-p;
+            border-radius: 10px;
+        }
+        .item-seis p, .item-seis p span{
+        color: $marron;
+        }
+        .item-seis p span{
+        font-size: 12px;
+        }
+        
+        .item-siete{
+            grid-area: item-siete;
+            padding-top: 10px;
+            width: 160px;
+            height: 120px;
+            background-color: $header-p;
+            border-radius: 10px;
+        }
+        
+        .item-ocho{
+            grid-area: item-ocho;
+            padding-top: 10px;
+            width: 160px;
+            height: 80px;
+            background-color: $header-p;
+            border-radius: 10px;
+        }
+       
+        .item-ocho p{
+            margin: 0;
+            color: $marron;
+        }
+        .item-ocho a{
+            text-decoration: none;
+            color: $marron;
+        }
+
+        .item-uno img, .item-tres img, .item-cinco img, .item-siete img{
+            width: 100px;
+            height: 100px;
+        }
+    }
+    /* PRODUCTOS */
+    main{
+        .main-productos{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 2rem 35rem;
+            grid-template-areas: 
+                "item-unos item-tress"
+                "item-doss item-cuatros";
+            gap: 1rem;
+            place-items: center;
+        }
+        #carouselExample, #carouselExample2{
+            width: 100%;
+            height: auto;
+            border: 20px solid $header-p;
+            border-radius: 10px;
+            margin: 0;
+            padding: 0;
+        }
+        .item-unos{
+            grid-area: item-unos;
+        }
+        .item-unos p{
+            text-align: centero ;
+        }
+        .item-doss{
+            grid-area: item-doss;;
+        }
+
+        .item-tress{
+            grid-area: item-tress;
+        }
+
+        .item-cuatross{
+            grid-area: item-cuatros;
+        }
+        .mesitas-materas{
+            background-color: $header-p;
+            width: 200px;
+            color: $marron;
+            margin: 2rem 0px 0px 0px;
+            padding: 0;
+        }
+        .matera-premium{
+            background-color: $header-p;
+            width: 200px;
+            color: $marron;
+            margin: 2rem 0px 0px 0px;
+            padding: 0;
+            text-align: center;
+        }
+    }
+    /* main acerca de nostros */
+    
+    .main-adn{
+        height: 50rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 10rem 10rem 20rem 5rem 5rem;
+        grid-template-areas: 
+        "chupetin-1 chupetin-1"
+        "chupetin-2 chupetin-5"
+        "chupetin-2 chupetin-3"
+        "chupetin-4 chupetin-4"
+        "chupetin-6 chupetin-6"; 
+    }
+    .chupetin-1{
+        grid-area: chupetin-1;
+    }   
+    .chupetin-1 h2{
+        // Estamos emocionados de presentarte nuestra marca, donde la moda, la tecnología y el diseño se encuentran para ofrecerte productos únicos
+        font-size: 20px;
+        padding-top: 2rem;
+        font-weight: 800;
+    }
+    .chupetin-2{
+        grid-area: chupetin-2;
+    }
+    .chupetin-2 img{
+        width: 300px;
+        height: 450px;
+        border: 10px solid $header-p;
+        border-radius: 15px;
+    }
+    .chupetin-3{
+        grid-area: chupetin-3;
+    }
+    .chupetin-3 h3{
+        // Desde celulares y termos hasta artículos innovadores y regalos especiales.
+        font-size: 20px;
         font-weight: 600;
+        text-align: center;
+        margin-right: 2rem;
+        margin-top: 5.2rem;
+        background-color: $header-p;
+        padding: 1rem;
+        border-radius: 20px;
+    }
+    .chupetin-4{
+        grid-area: chupetin-4;
+    }
+    .chupetin-4 p{
+        // En Ningra podés encontrar lo que necesitás para conectar con tu estilo de vida
+        font-size: 20px;
+        background-color: $header-p;
+
+    }
+    .chupetin-4 p span{
+        color:$marron;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .chupetin-5{
+        grid-area: chupetin-5;
+    }
+    .chupetin-5 p{
+        // Nuestra misión es ofrecerte productos que inspiran y tecnología que conecta, para que puedas tener lo mejor al alcance de tu mano.
+        font-size: 18px;
+        font-weight: 600;
+        background-color: $header-p;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 5rem 2rem 0rem .2rem;
+        align-content: center;
+    }
+    .chupetin-6{
+        grid-area: chupetin-6;
+    }
+    .chupetin-6 p{
+        // ¡Gracias por acompañarnos en esta nueva aventura!🌞
+        font-size: 20px;
+        background-color: $header-p;
+        text-align: center;
+        align-items: center;
+    }
+    .salto1, .salto2{
+        margin: 5px 0px 0px 0px;
+    }
+/* footer tablet */
+    footer{
+        display: block;
+        background:linear-gradient(0deg, $header-p 70%, $pastel);
+        height: 17rem;
+        background-color: $header-p;
+        h4{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2rem;
+            padding-left: 3rem;
+            margin-bottom: 2rem;
+            font-size: 20PX;
+            font-weight: 800;
+        }
+        div ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        div ul li{
+            margin: 1rem;
+        }
     }
 }

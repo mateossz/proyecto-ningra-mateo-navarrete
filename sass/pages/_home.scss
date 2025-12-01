@@ -39,19 +39,25 @@ header{
         }
         .redirecciones ul li a{
             @include s-redirecciones;
+            transition: .7s;
         }
         .redirecciones ul li a:hover{
-            background-color: $jover;
+            
+            background-color: $header-p;
+            color: $marron;
             transform: scale(1.1);
         }
         .redirecciones ul li{
             @include redirecciones;
         }
+        .productos{
+            animation: slide-in-blurred-left .5s cubic-bezier(0.230, 1.000, 0.320, 1.000) .6s both;
+        }
         .contacto{
             animation: slide-in-blurred-left .5s cubic-bezier(0.230, 1.000, 0.320, 1.000) .4s both;
         }
         .adn{
-            animation: slide-in-blurred-left .5s cubic-bezier(0.230, 1.000, 0.320, 1.000) .7s both;
+            animation: slide-in-blurred-left .5s cubic-bezier(0.230, 1.000, 0.320, 1.000) .8s both;
         }
         @keyframes slide-in-blurred-left {
             0% {
@@ -85,6 +91,10 @@ header{
             height: 2rem;
         }
 
+        .accordion-body{
+            padding: 0;
+        }
+
         .accordion-item{
             width: 2rem;
             height: 2rem;
@@ -107,8 +117,8 @@ header{
             right: 3rem;
             left: auto;
             top: 1px;
-            width: 9rem;
-            height: 9rem;
+            width: 10rem;
+            height: 9.5rem;
             background-color:$pastel;
             border: 3px solid $marron;
             border-radius: 10px;
@@ -202,7 +212,7 @@ main{
     @include main;
     
     p a:hover{
-        color: $jover;
+        color: $marron;
     }
     h2 span{
         color: $marron;
@@ -222,37 +232,72 @@ main{
     }
     p span{
         font-size: medium;
-        color: $azul;
+        color: $marron;
     }
-    img{
+
+    .diasorteo span{
+        color: $azul;
+        font-weight: 800;
+    }
+
+    .clc{
+        margin-top: 1rem;
+    }
+
+    .img-index{
         width: 400px;
-        height: auto;
+        height: 500px;
+        border: 10px solid $header-p;
+        border-radius: 10px;
     }
 }
-
+/*main adn*/
+.main-adn{
+    .chupetin-1{
+        h2{
+            font-weight: 800
+        }
+        p{
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+    }
+    .chupetin-2 img{
+        border: 15px solid $header-p;
+        border-radius: 15px;
+    }
+    .chupetin-3{
+        h3{
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+    }
+    .chupetin-6{
+        font-weight: 600;
+    }
+}
     
  /* MAIN PRODUCTOS */
  main{
     #carouselExample, #carouselExample2{
-        width: 90%;
+        width: 60%;
         height: 50%;
         left: 1.2rem;
-        border: 1px solid $marron;
+        border: 5px solid $header-p;
     }
     
     .mesitas-materas{
-        padding-top: 15px;
         margin-top: 1rem;
-        background-color: $marron;
+        background-color: $header-p;
         width: 200px;
-        color: $pastel;
+        color: $marron;
     }
     .matera-premium{
         text-align: left;
         padding: 0rem 0rem 0rem 1rem;
-        background-color: $marron;
+        background-color: $header-p;
         width: 200px;
-        color: $pastel;
+        color: $marron;
     }
  }
 
@@ -260,20 +305,29 @@ main{
 main{
     .contenedor{
         display: grid;
-        grid-template-columns: 1rem 1rem;
-        grid-template-rows: 1rem 1rem 1rem;
+        grid-template-columns: 1rem 10rem;
+        grid-template-rows: repeat(4, 2rem);
         grid-template-areas: 
         "item-uno item-dos"
         "item-tres item-cuatro"
-        "item-cinco item-seis";
+        "item-cinco item-seis"
+        "item-siete item-ocho";
         gap: 5rem;
+        margin-left: 1rem;
     }
     .item-uno{
-    grid-area: item-uno;
+        grid-area: item-uno;
     }
 
     .item-dos{
         grid-area: item-dos;
+        background-color: $header-p;
+        height: 80px;
+        border-radius: 15px;
+        align-content: center;
+    }
+    .item-dos p{
+        color: $marron;
     }
 
     .item-tres{
@@ -282,6 +336,15 @@ main{
 
     .item-cuatro{
         grid-area: item-cuatro;
+        background-color: $header-p;
+        height: 80px;
+        border-radius: 15px;
+        align-content: center;
+    }
+    .item-cuatro p, .item-cuatro a{
+        text-decoration: none;
+        color: $marron;
+        margin: 0;
     }
 
     .item-cinco{
@@ -289,7 +352,32 @@ main{
     }
 
     .item-seis{
-        grid-area: item-seis;
+        grid-area: item-seis;;
+        background-color: $header-p;
+        height: 80px;
+        width: 250px;
+        border-radius: 15px;
+        align-content: center;
+    }
+    .item-seis p{
+        color: $marron;
+        margin: 0;
+    }
+
+    .item-siete{
+        grid-area: item-siete;
+    }
+    .item-ocho{
+        grid-area: item-ocho;
+        background-color: $header-p;
+        height: 80px;
+        border-radius: 15px;
+        align-content:center ;
+    }
+    .item-ocho p, .item-ocho a{
+        text-decoration: none;
+        color: $marron;
+        margin: 0;
     }
     .contenedor img{
     width: 5rem;
@@ -298,8 +386,27 @@ main{
 }
 
 footer{
-    h4{
-        color: $azul;
-        font-size: medium;
+        display: block;
+        background:linear-gradient(0deg, $header-p 70%, $pastel);
+        width: 100%;
+        height: 10rem;
+        background-color: $header-p;
+        h4{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2rem;
+            padding-left: 3rem;
+            margin-bottom: 2rem;
+            font-size: 20PX;
+            font-weight: 800;
+        }
+        div ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        div ul li{
+            margin: 1rem;
+        }
     }
-}
