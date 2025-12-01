@@ -392,20 +392,19 @@ footer div ul li {
 /* MQ TABLET */
 @media screen and (min-width: 750px) and (max-width: 1200px) {
   /* header tablet  */
-  .headerr {
-    display: inline;
-  }
   header h1 {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
-  header .headerr .accordion {
+  header .accordion {
     display: none;
   }
-  header .headerr .redirecciones {
-    display: inline;
+  header .headerr {
+    display: block;
   }
-  header .headerr nav {
-    gap: 10rem;
+  header .headerr .redirecciones {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
   header .headerr .redirecciones ul li a {
     background-color: #A85C25;
@@ -422,13 +421,17 @@ footer div ul li {
     margin-top: 1.3rem;
   }
   header .headerr .redirecciones ul {
+    display: block;
+    justify-content: center;
     margin: 0;
     padding: 0;
-    display: block;
     text-align: center;
+    gap: 3rem;
   }
-  header .headerr .productooo {
-    width: 250px;
+  header .headerr .logo-principal {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   /* main tablet*/
   main h2 {
